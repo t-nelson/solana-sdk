@@ -913,7 +913,7 @@ pub fn construct_eth_pubkey(
 pub fn verify(
     data: &[u8],
     instruction_datas: &[&[u8]],
-    _feature_set: &solana_feature_set::FeatureSet,
+    _feature_set: &agave_feature_set::FeatureSet,
 ) -> Result<(), PrecompileError> {
     if data.is_empty() {
         return Err(PrecompileError::InvalidInstructionDataSize);
@@ -1021,7 +1021,7 @@ pub mod test {
     use {
         super::*,
         rand0_7::{thread_rng, Rng},
-        solana_feature_set::FeatureSet,
+        agave_feature_set::FeatureSet,
         solana_hash::Hash,
         solana_keccak_hasher as keccak,
         solana_keypair::Keypair,
@@ -1201,7 +1201,7 @@ pub mod test {
         let message_arr = b"hello";
         let mut secp_instruction = new_secp256k1_instruction(&secp_privkey, message_arr);
         let mint_keypair = Keypair::new();
-        let feature_set = solana_feature_set::FeatureSet::all_enabled();
+        let feature_set = agave_feature_set::FeatureSet::all_enabled();
 
         let tx = Transaction::new_signed_with_payer(
             &[secp_instruction.clone()],

@@ -1,6 +1,6 @@
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 use {
-    lazy_static::lazy_static, solana_feature_set::FeatureSet,
+    lazy_static::lazy_static, agave_feature_set::FeatureSet,
     solana_message::compiled_instruction::CompiledInstruction,
     solana_precompile_error::PrecompileError, solana_pubkey::Pubkey,
 };
@@ -61,7 +61,7 @@ lazy_static! {
         ),
         Precompile::new(
             solana_sdk_ids::secp256r1_program::id(),
-            Some(solana_feature_set::enable_secp256r1_precompile::id()),
+            Some(agave_feature_set::enable_secp256r1_precompile::id()),
             solana_secp256r1_program::verify,
         )
     ];

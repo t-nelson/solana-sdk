@@ -131,7 +131,7 @@ pub use solana_epoch_info as epoch_info;
 )]
 pub use solana_epoch_rewards_hasher as epoch_rewards_hasher;
 #[deprecated(since = "2.1.0", note = "Use `solana-feature-set` crate instead")]
-pub use solana_feature_set as feature_set;
+pub use agave_feature_set as feature_set;
 #[deprecated(since = "2.2.0", note = "Use `solana-fee-structure` crate instead")]
 pub use solana_fee_structure as fee;
 #[deprecated(since = "2.1.0", note = "Use `solana-inflation` crate instead")]

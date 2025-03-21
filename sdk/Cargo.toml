@@ -60,7 +60,7 @@ dev-context-only-utils = [
     "solana-transaction/dev-context-only-utils",
 ]
 frozen-abi = [
-    "solana-feature-set/frozen-abi",
+    "agave-feature-set/frozen-abi",
     "solana-fee-structure/frozen-abi",
     "solana-account/frozen-abi",
     "solana-cluster-type/frozen-abi",
@@ -102,7 +102,8 @@ solana-derivation-path = { workspace = true }
 solana-ed25519-program = { workspace = true, optional = true }
 solana-epoch-info = { workspace = true, features = ["serde"] }
 solana-epoch-rewards-hasher = { workspace = true }
-solana-feature-set = { workspace = true }
+agave-feature-set = { workspace = true }
+solana-feature-set-interface = { workspace = true }
 solana-fee-structure = { workspace = true, features = ["serde"] }
 solana-genesis-config = { workspace = true, features = [
     "serde"

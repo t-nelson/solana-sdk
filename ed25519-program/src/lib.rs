@@ -6,7 +6,7 @@ use {
     bytemuck::bytes_of,
     bytemuck_derive::{Pod, Zeroable},
     ed25519_dalek::{ed25519::signature::Signature, Signer, Verifier},
-    solana_feature_set::{ed25519_precompile_verify_strict, FeatureSet},
+    agave_feature_set::{ed25519_precompile_verify_strict, FeatureSet},
     solana_instruction::Instruction,
     solana_precompile_error::PrecompileError,
 };
@@ -220,7 +220,7 @@ pub mod test {
         ed25519_dalek::Signer as EdSigner,
         hex,
         rand0_7::{thread_rng, Rng},
-        solana_feature_set::FeatureSet,
+        agave_feature_set::FeatureSet,
         solana_hash::Hash,
         solana_keypair::Keypair,
         solana_sdk::transaction::Transaction,

@@ -50,7 +50,7 @@ mod target_arch {
             pkey::{PKey, Private},
             sign::{Signer, Verifier},
         },
-        solana_feature_set::FeatureSet,
+        agave_feature_set::FeatureSet,
         solana_instruction::Instruction,
         solana_precompile_error::PrecompileError,
     };
@@ -329,7 +329,7 @@ mod target_arch {
     mod test {
         use {
             super::*,
-            solana_feature_set::FeatureSet,
+            agave_feature_set::FeatureSet,
             solana_sdk::{
                 hash::Hash,
                 signature::{Keypair, Signer},
@@ -738,7 +738,7 @@ mod target_arch {
 
 #[cfg(any(target_arch = "wasm32", target_os = "solana"))]
 mod target_arch {
-    use {solana_feature_set::FeatureSet, solana_precompile_error::PrecompileError};
+    use {agave_feature_set::FeatureSet, solana_precompile_error::PrecompileError};
 
     pub fn verify(
         _data: &[u8],

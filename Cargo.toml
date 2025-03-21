@@ -99,7 +99,7 @@ members = [
     "signature",
     "signer",
     "slot-hashes",
-    "slot-history",
+    "slot-history", "feature-set-interface",
     "stable-layout",
     "system-transaction",
     "sysvar",
@@ -233,7 +233,8 @@ solana-epoch-rewards-hasher = { path = "epoch-rewards-hasher", version = "2.2.1"
 solana-epoch-schedule = { path = "epoch-schedule", version = "2.2.1" }
 solana-example-mocks = { path = "example-mocks", version = "2.2.1" }
 solana-feature-gate-interface = { path = "feature-gate-interface", version = "2.2.1" }
-solana-feature-set = { path = "feature-set", version = "2.2.4" }
+solana-feature-set-interface = { path = "feature-set-interface", version = "2.2.1" }
+agave-feature-set = { path = "../solana/feature-set", version = "2.3.0", features = ["frozen-abi"] }
 solana-fee-calculator = { path = "fee-calculator", version = "2.2.1" }
 solana-fee-structure = { path = "fee-structure", version = "2.2.1" }
 solana-frozen-abi = { path = "frozen-abi", version = "2.2.1" }
@@ -348,5 +349,4 @@ solana-frozen-abi = { path = "frozen-abi" }
 solana-frozen-abi-macro = { path = "frozen-abi-macro" }
 solana-instruction = { path = "instruction" }
 solana-program-error = { path = "program-error" }
-solana-pubkey = { path = "pubkey" }
 solana-sysvar-id = { path = "sysvar-id" }
