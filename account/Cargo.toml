@@ -18,9 +18,10 @@ rustdoc-args = ["--cfg=docsrs"]
 bincode = ["dep:bincode", "dep:solana-sysvar", "serde"]
 dev-context-only-utils = ["bincode", "dep:qualifier_attr"]
 frozen-abi = [
+    "dep:env_logger",
+    "dep:log",
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
-    "dep:solana-logger",
     "solana-pubkey/frozen-abi",
 ]
 serde = [
@@ -32,6 +33,8 @@ serde = [
 
 [dependencies]
 bincode = { workspace = true, optional = true }
+env_logger = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 qualifier_attr = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_bytes = { workspace = true, optional = true }
@@ -41,7 +44,6 @@ solana-clock = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-instruction-error = { workspace = true }
-solana-logger = { workspace = true, optional = true }
 solana-pubkey = { workspace = true }
 solana-sdk-ids = { workspace = true }
 solana-sysvar = { workspace = true, features = ["bincode"], optional = true }

@@ -13,10 +13,11 @@ edition = { workspace = true }
 targets = ["x86_64-unknown-linux-gnu"]
 
 [features]
-frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "serde"]
+frozen-abi = ["dep:log", "dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "serde"]
 serde = ["dep:serde", "dep:serde_derive"]
 
 [dependencies]
+log = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-frozen-abi = { workspace = true, optional = true }

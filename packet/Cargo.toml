@@ -24,12 +24,13 @@ serde = [
     "dep:serde_derive",
     "dep:serde_with",
 ]
-frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro"]
+frozen-abi = ["dep:log", "dep:solana-frozen-abi", "dep:solana-frozen-abi-macro"]
 
 [dependencies]
 bincode = { workspace = true, optional = true }
 bitflags = { workspace = true }
 cfg_eval = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 serde_with = { workspace = true, optional = true, features = ["macros"] }

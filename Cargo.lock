@@ -2723,6 +2723,8 @@ name = "solana-account"
 version = "3.1.0"
 dependencies = [
  "bincode",
+ "env_logger",
+ "log",
  "qualifier_attr",
  "serde",
  "serde_bytes",
@@ -2733,7 +2735,6 @@ dependencies = [
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-instruction-error",
- "solana-logger",
  "solana-pubkey",
  "solana-sdk-ids",
  "solana-sysvar",
@@ -2762,6 +2763,7 @@ dependencies = [
  "curve25519-dalek",
  "five8",
  "five8_const",
+ "log",
  "rand",
  "serde",
  "serde_derive",
@@ -2789,6 +2791,7 @@ version = "3.0.0"
 dependencies = [
  "bincode",
  "bytemuck",
+ "log",
  "serde",
  "serde_derive",
  "solana-address-lookup-table-interface",
@@ -2857,6 +2860,7 @@ dependencies = [
  "criterion",
  "ff",
  "group",
+ "log",
  "pairing",
  "rand",
  "rayon",
@@ -2935,6 +2939,7 @@ dependencies = [
 name = "solana-cluster-type"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -2955,6 +2960,7 @@ name = "solana-compute-budget-interface"
 version = "3.0.0"
 dependencies = [
  "borsh",
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -3015,6 +3021,7 @@ dependencies = [
 name = "solana-epoch-rewards"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-epoch-rewards",
@@ -3039,6 +3046,7 @@ dependencies = [
 name = "solana-epoch-schedule"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-clock",
@@ -3102,13 +3110,13 @@ dependencies = [
 name = "solana-fee-calculator"
 version = "3.0.0"
 dependencies = [
+ "env_logger",
  "log",
  "serde",
  "serde_derive",
  "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
- "solana-logger",
  "static_assertions",
 ]
 
@@ -3141,6 +3149,7 @@ dependencies = [
  "bv",
  "bytes",
  "dashmap",
+ "env_logger",
  "im",
  "log",
  "memmap2",
@@ -3150,7 +3159,6 @@ dependencies = [
  "serde_with",
  "sha2",
  "solana-frozen-abi-macro",
- "solana-logger",
  "thiserror 2.0.12",
 ]
 
@@ -3158,6 +3166,7 @@ dependencies = [
 name = "solana-frozen-abi-macro"
 version = "3.0.0"
 dependencies = [
+ "log",
  "proc-macro2",
  "quote",
  "syn 2.0.98",
@@ -3169,6 +3178,8 @@ version = "3.0.0"
 dependencies = [
  "bincode",
  "chrono",
+ "env_logger",
+ "log",
  "memmap2",
  "serde",
  "serde_derive",
@@ -3198,6 +3209,7 @@ dependencies = [
 name = "solana-hard-forks"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -3213,6 +3225,7 @@ dependencies = [
  "bytemuck",
  "bytemuck_derive",
  "five8",
+ "log",
  "serde",
  "serde_derive",
  "solana-atomic-u64",
@@ -3226,6 +3239,7 @@ dependencies = [
 name = "solana-inflation"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -3252,6 +3266,7 @@ dependencies = [
 name = "solana-instruction-error"
 version = "2.0.0"
 dependencies = [
+ "log",
  "num-traits",
  "serde",
  "serde_derive",
@@ -3334,6 +3349,7 @@ name = "solana-loader-v3-interface"
 version = "6.1.0"
 dependencies = [
  "bincode",
+ "log",
  "serde",
  "serde_bytes",
  "serde_derive",
@@ -3350,6 +3366,7 @@ dependencies = [
 name = "solana-loader-v4-interface"
 version = "3.1.0"
 dependencies = [
+ "log",
  "memoffset",
  "serde",
  "serde_bytes",
@@ -3383,8 +3400,10 @@ dependencies = [
  "bitflags 2.8.0",
  "blake3",
  "borsh",
+ "env_logger",
  "itertools 0.12.1",
  "lazy_static",
+ "log",
  "serde",
  "serde_derive",
  "serde_json",
@@ -3396,7 +3415,6 @@ dependencies = [
  "solana-hash",
  "solana-instruction",
  "solana-instruction-error",
- "solana-logger",
  "solana-message",
  "solana-nonce",
  "solana-sanitize",
@@ -3486,6 +3504,7 @@ dependencies = [
  "bincode",
  "bitflags 2.8.0",
  "cfg_eval",
+ "log",
  "serde",
  "serde_derive",
  "serde_with",
@@ -3499,6 +3518,7 @@ dependencies = [
 name = "solana-poh-config"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-clock",
@@ -3647,6 +3667,7 @@ dependencies = [
 name = "solana-rent"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-clock",
@@ -3662,6 +3683,7 @@ dependencies = [
 name = "solana-reward-info"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -3792,6 +3814,7 @@ dependencies = [
  "anyhow",
  "borsh",
  "k256",
+ "log",
  "rand",
  "solana-define-syscall",
  "solana-frozen-abi",
@@ -3875,6 +3898,7 @@ version = "3.0.0"
 dependencies = [
  "assert_matches",
  "bincode",
+ "log",
  "serde_core",
  "serde_json",
  "solana-frozen-abi",
@@ -3901,6 +3925,7 @@ dependencies = [
  "curve25519-dalek",
  "ed25519-dalek",
  "five8",
+ "log",
  "rand",
  "serde",
  "serde-big-array",
@@ -3973,6 +3998,8 @@ version = "2.0.0"
 dependencies = [
  "anyhow",
  "borsh",
+ "env_logger",
+ "log",
  "num-traits",
  "serde",
  "serde_derive",
@@ -3983,7 +4010,6 @@ dependencies = [
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-instruction",
- "solana-logger",
  "solana-msg",
  "solana-nonce",
  "solana-program-entrypoint",
@@ -4079,6 +4105,8 @@ dependencies = [
  "anyhow",
  "bincode",
  "borsh",
+ "env_logger",
+ "log",
  "serde",
  "serde_derive",
  "solana-address",
@@ -4089,7 +4117,6 @@ dependencies = [
  "solana-instruction",
  "solana-instruction-error",
  "solana-keypair",
- "solana-logger",
  "solana-message",
  "solana-nonce",
  "solana-packet",
@@ -4112,6 +4139,7 @@ dependencies = [
 name = "solana-transaction-error"
 version = "3.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
@@ -4131,7 +4159,9 @@ dependencies = [
  "arbitrary",
  "bincode",
  "cfg_eval",
+ "env_logger",
  "itertools 0.12.1",
+ "log",
  "num-derive",
  "num-traits",
  "rand",
@@ -4145,7 +4175,6 @@ dependencies = [
  "solana-hash",
  "solana-instruction",
  "solana-instruction-error",
- "solana-logger",
  "solana-pubkey",
  "solana-rent",
  "solana-sdk-ids",

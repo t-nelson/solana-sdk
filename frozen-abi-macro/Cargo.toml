@@ -24,6 +24,7 @@ default = []
 frozen-abi = []
 
 [dependencies]
+log = { workspace = true }
 proc-macro2 = { workspace = true }
 quote = { workspace = true }
 syn = { workspace = true, features = ["full", "extra-traits"] }

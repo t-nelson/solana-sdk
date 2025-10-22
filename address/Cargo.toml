@@ -25,6 +25,7 @@ decode = ["dep:five8", "dep:five8_const", "error"]
 dev-context-only-utils = ["dep:arbitrary", "rand"]
 error = ["dep:solana-program-error"]
 frozen-abi = [
+    "dep:log",
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
     "dep:solana-program-error",
@@ -45,6 +46,7 @@ bytemuck = { workspace = true, optional = true }
 bytemuck_derive = { workspace = true, optional = true }
 five8 = { workspace = true, optional = true }
 five8_const = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 rand = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }

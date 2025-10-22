@@ -28,6 +28,8 @@ dev-context-only-utils = [
     "solana-pubkey/dev-context-only-utils",
 ]
 frozen-abi = [
+    "dep:env_logger",
+    "dep:log",
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
     "serde",
@@ -51,6 +53,8 @@ serde = [
 arbitrary = { workspace = true, features = ["derive"], optional = true }
 bincode = { workspace = true, optional = true }
 cfg_eval = { workspace = true, optional = true }
+env_logger = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 num-derive = { workspace = true }
 num-traits = { workspace = true }
 serde = { workspace = true, optional = true }
@@ -77,7 +81,6 @@ solana-serialize-utils = { workspace = true }
 itertools = { workspace = true }
 rand = { workspace = true }
 solana-epoch-schedule = { workspace = true }
-solana-logger = { workspace = true }
 solana-pubkey = { workspace = true, features = ["dev-context-only-utils"] }
 solana-vote-interface = { path = ".", features = ["dev-context-only-utils"] }
 

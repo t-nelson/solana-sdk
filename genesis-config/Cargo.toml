@@ -16,6 +16,8 @@ rustdoc-args = ["--cfg=docsrs"]
 
 [features]
 frozen-abi = [
+    "dep:env_logger",
+    "dep:log",
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
     "dep:solana-logger",
@@ -36,6 +38,8 @@ serde = [
 [dependencies]
 bincode = { workspace = true }
 chrono = { workspace = true, features = ["alloc"] }
+env_logger = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 memmap2 = { workspace = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }

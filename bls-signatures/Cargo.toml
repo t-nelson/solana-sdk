@@ -21,7 +21,7 @@ crate-type = ["rlib"]
 [features]
 bytemuck = ["dep:bytemuck"]
 default = ["std"]
-frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "std"]
+frozen-abi = ["dep:log", "dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "std"]
 parallel = ["dep:rayon"]
 serde = ["dep:cfg_eval", "dep:serde", "dep:serde_with"]
 solana-signer-derive = ["dep:solana-signer", "dep:solana-signature", "dep:subtle"]
@@ -31,6 +31,7 @@ std = ["dep:serde_json"]
 base64 = { workspace = true }
 bytemuck = { workspace = true, optional = true }
 cfg_eval = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 pairing = { workspace = true }
 serde = { workspace = true, features = ["derive"], optional = true }
 serde_json = { workspace = true, optional = true }

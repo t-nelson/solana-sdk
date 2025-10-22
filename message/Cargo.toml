@@ -20,9 +20,10 @@ bincode = ["dep:bincode", "serde"]
 blake3 = ["dep:blake3"]
 dev-context-only-utils = ["bincode", "blake3"]
 frozen-abi = [
+    "dep:env_logger",
+    "dep:log",
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
-    "dep:solana-logger",
     "solana-address/frozen-abi",
     "solana-hash/frozen-abi",
     "serde",
@@ -39,7 +40,9 @@ serde = [
 [dependencies]
 bincode = { workspace = true, optional = true }
 blake3 = { workspace = true, features = ["traits-preview"], optional = true }
+env_logger = { workspace = true, optional = true }
 lazy_static = { workspace = true }
+log = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-address = { workspace = true }
@@ -47,7 +50,6 @@ solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-hash = { workspace = true, features = ["decode", "sanitize"] }
 solana-instruction = { workspace = true, features = ["std"] }
-solana-logger = { workspace = true, optional = true }
 solana-sanitize = { workspace = true }
 solana-sdk-ids = { workspace = true }
 solana-short-vec = { workspace = true, optional = true }

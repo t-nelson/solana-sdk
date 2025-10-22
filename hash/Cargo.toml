@@ -22,7 +22,7 @@ bytemuck = ["copy", "dep:bytemuck", "dep:bytemuck_derive"]
 copy = []
 decode = ["dep:five8"]
 default = []
-frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "std"]
+frozen-abi = ["dep:log", "dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "std"]
 sanitize = ["dep:solana-sanitize"]
 serde = ["dep:serde", "dep:serde_derive"]
 std = ["borsh?/std", "serde?/std"]
@@ -32,6 +32,7 @@ borsh = { workspace = true, optional = true }
 bytemuck = { workspace = true, optional = true }
 bytemuck_derive = { workspace = true, optional = true }
 five8 = { workspace = true, optional = true }
+log = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-atomic-u64 = { workspace = true, optional = true }

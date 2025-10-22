@@ -17,10 +17,11 @@ rustdoc-args = ["--cfg=docsrs"]
 [features]
 bincode = ["dep:solana-system-interface", "serde", "solana-instruction/bincode"]
 dev-context-only-utils = ["bincode"]
-frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "serde"]
+frozen-abi = ["dep:log", "dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "serde"]
 serde = ["dep:serde", "dep:serde_bytes", "dep:serde_derive", "solana-pubkey/serde"]
 
 [dependencies]
+log = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_bytes = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
