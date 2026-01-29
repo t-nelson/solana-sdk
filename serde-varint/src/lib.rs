@@ -20,7 +20,7 @@ pub trait VarInt: Sized {
         S: Serializer;
 }
 
-struct VarIntVisitor<T> {
+pub struct VarIntVisitor<T> {
     phantom: PhantomData<T>,
 }
 
